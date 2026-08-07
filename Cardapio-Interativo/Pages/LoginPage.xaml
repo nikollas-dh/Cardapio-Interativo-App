@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cardapio_Interativo.Pages.LoginPage"
              Title="">
-    <VerticalStackLayout>
-        <Border WidthRequest="500" HeightRequest="600">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Border WidthRequest="600" HeightRequest="700" StrokeShape="RoundRectangle 50">
             <VerticalStackLayout HorizontalOptions="Center">
-                <Label Text="Seja Bem vindo" HorizontalTextAlignment="Center" FontSize="20" Margin="0,30,0,70"/>
+                <Label Text="Seja Bem vindo" HorizontalTextAlignment="Center" FontSize="32" FontAttributes="Bold" Margin="0,90,0,70"/>
 
                 <VerticalStackLayout WidthRequest="350" Padding="0" Spacing="10" Margin="0,0,0,100">
                     <Entry Placeholder="Email" x:Name="txtEmail"/>

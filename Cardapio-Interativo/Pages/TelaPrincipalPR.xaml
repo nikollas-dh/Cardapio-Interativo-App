@@ -2,19 +2,57 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cardapio_Interativo.Pages.TelaPrincipalPR"
-             Title="TelaPrincipalPR">
-    <VerticalStackLayout>
-        <Border WidthRequest="500" HeightRequest="600">
-            <VerticalStackLayout>
-                <Label Text="Seja Bem vindo"/>
+             Title="Restaurantes">
 
-                <VerticalStackLayout>
-                    <Entry Placeholder="Email" x:Name="txtEmail"/>
-                    <Entry Placeholder="Senha" x:Name="txtSenha"/>
-                </VerticalStackLayout>
+    <Grid RowDefinitions="Auto, *, *">
+        <SearchBar Grid.Row="0"
+                   Placeholder="Buscar restaurante..."
+                   Margin="16,10"
+                   HorizontalOptions="Fill"
+                   />
 
-                <Button Text="Acessar" x:Name="btnLogin" Clicked="btnLogin_Clicked"/>
-            </VerticalStackLayout>
-        </Border>
-    </VerticalStackLayout>
+        <CollectionView Grid.Row="1"
+                        x:Name="Restaurantes"
+                        Margin="16,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,0,0,16"
+                            Padding="12"
+                            StrokeShape="RoundRectangle 10">
+
+                        <VerticalStackLayout Spacing="8">
+                            <Image Source="{Binding Foto}"
+                                   HeightRequest="150"
+                                   Aspect="AspectFill" />
+
+                            <Label Text="{Binding Nome}"
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+
+                            <Label Text="{Binding Descricao}"
+                                   FontSize="14"
+                                   TextColor="Gray" />
+                            <Label Text="{Binding Cidade}"
+                                   FontSize="14"
+                                   TextColor="Gray" />
+
+                            <Button Text="Ver Cardápio"
+                                    Margin="0,8,0,0" />
+                        </VerticalStackLayout>
+
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <Label Text="Nenhum restaurante encontrado."
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" 
+                       />
+            </CollectionView.EmptyView>
+
+        </CollectionView>
+
+        <Label Text="Perfil Proprietário" Grid.Row="2" HorizontalTextAlignment="Center" VerticalTextAlignment="End" FontAttributes="Bold" FontSize="18"/>
+
+    </Grid>
 </ContentPage>
