@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cardapio_Interativo.Pages.TelaPrincipalPR"
+             Title="TelaPrincipalPR">
+    <VerticalStackLayout>
+        <Border WidthRequest="500" HeightRequest="600">
+            <VerticalStackLayout>
+                <Label Text="Seja Bem vindo"/>
+
+                <VerticalStackLayout>
+                    <Entry Placeholder="Email" x:Name="txtEmail"/>
+                    <Entry Placeholder="Senha" x:Name="txtSenha"/>
+                </VerticalStackLayout>
+
+                <Button Text="Acessar" x:Name="btnLogin" Clicked="btnLogin_Clicked"/>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

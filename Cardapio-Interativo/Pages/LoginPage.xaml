@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cardapio_Interativo.Pages.LoginPage"
+             Title="">
+    <VerticalStackLayout>
+        <Border WidthRequest="500" HeightRequest="600">
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="Seja Bem vindo" HorizontalTextAlignment="Center" FontSize="20" Margin="0,30,0,70"/>
+
+                <VerticalStackLayout WidthRequest="350" Padding="0" Spacing="10" Margin="0,0,0,100">
+                    <Entry Placeholder="Email" x:Name="txtEmail"/>
+                    <HorizontalStackLayout >
+                        <Entry Placeholder="Senha" x:Name="txtSenha" WidthRequest="350"/>
+                        <ImageButton/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <Button Text="Acessar" x:Name="btnLogin" Clicked="btnLogin_Clicked" WidthRequest="350"/>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

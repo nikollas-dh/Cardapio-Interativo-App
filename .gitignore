@@ -1,0 +1,18 @@
+# Pastas de compilação do .NET / Visual Studio
+bin/
+obj/
+.vs/
+
+# Arquivos de usuário do Visual Studio
+*.user
+*.userosscache
+*.sln.docstates
+
+# Packages
+*.nupkg
+packages/
+
+# OS e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
