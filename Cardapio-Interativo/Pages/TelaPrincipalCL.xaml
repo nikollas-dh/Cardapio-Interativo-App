@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Cardapio_Interativo.Pages.TelaPrincipalCL"
-             Title="TelaPrincipalCL">
+             Title="Restaurantes">
     
-    <Grid RowDefinitions="Auto, *, *">
+    <Grid RowDefinitions="50, *, Auto">
         <SearchBar Grid.Row="0"
                 Placeholder="Buscar restaurante..."
-                Margin="16,10"
+                Margin="0,10"
                 HorizontalOptions="Fill"
                 />
 
         <CollectionView Grid.Row="1"
-                     x:Name="Restaurantes"
+                     x:Name="ListaRestaurantes"
                      Margin="16,0">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="0,0,0,16"
+                    <Border Margin="10,40,0,0"
                          Padding="12"
                          StrokeShape="RoundRectangle 10">
 

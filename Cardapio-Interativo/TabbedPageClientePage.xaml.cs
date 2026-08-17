@@ -1,3 +1,5 @@
+using Cardapio_Interativo.Pages;
+
 namespace Cardapio_Interativo;
 
 public partial class TabbedPageClientePage : TabbedPage
@@ -5,5 +7,9 @@ public partial class TabbedPageClientePage : TabbedPage
 	public TabbedPageClientePage()
 	{
 		InitializeComponent();
-	}
+        Children.Clear();
+
+        Children.Add(new TelaPrincipalCL());
+        Children.Add(new Ranking());
+    }
 }
