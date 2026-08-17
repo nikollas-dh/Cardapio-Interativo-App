@@ -9,6 +9,7 @@
                    Placeholder="Buscar restaurante..."
                    Margin="16,10"
                    HorizontalOptions="Fill"
+                   TextChanged="SearchBar_TextChanged"
                    />
 
         <CollectionView Grid.Row="1"

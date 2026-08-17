@@ -11,5 +11,5 @@ public partial class LoginPage : ContentPage
     {
 		Application.Current.MainPage = new TabbedPageProp();
 		//Application.Current.MainPage = new TabbedPageClientePage();
-    }
+	}
 }
