@@ -37,7 +37,7 @@
                                 TextColor="Gray" />
 
                             <Button Text="Visualizar Cardápio"
-                                 Margin="0,8,0,0" />
+                                 Margin="0,8,0,0" Clicked="VisualizarCardapio_Clicked"/>
                         </VerticalStackLayout>
 
                     </Border>

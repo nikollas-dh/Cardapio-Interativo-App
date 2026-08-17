@@ -34,4 +34,9 @@ public partial class TelaPrincipalCL : ContentPage
             await DisplayAlert("Erro na API", ex.Message, "OK");
         }
     }
+
+    private void VisualizarCardapio_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

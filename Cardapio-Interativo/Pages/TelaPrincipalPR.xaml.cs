@@ -35,4 +35,9 @@ public partial class TelaPrincipalPR : ContentPage
     {
 
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
