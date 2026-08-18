@@ -29,8 +29,7 @@ public partial class TelaPrincipalCL : ContentPage
             //var api = "http://192.168.15.4:5123/api/restaurante";
             var api = "http://10.0.2.2:5123/api/restaurante";
             var restaurantes = await client.GetFromJsonAsync<List<Restaurante>>(api);
-            //ListaRestaurantes.ItemsSource = restaurantes;
-            //
+
             restaurantesOriginais = restaurantes;
             ListaRestaurantes.ItemsSource = restaurantes;
         }
