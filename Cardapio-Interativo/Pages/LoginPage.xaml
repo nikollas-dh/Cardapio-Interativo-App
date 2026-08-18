@@ -17,6 +17,7 @@
                 </VerticalStackLayout>
 
                 <Button Text="Acessar" x:Name="btnLogin" Clicked="btnLogin_Clicked" WidthRequest="350"/>
+                <Button Text="Acessar2" x:Name="btnLogin2" Clicked="btnLogin_Clicked_1" WidthRequest="350" Margin="20"/>
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>

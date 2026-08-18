@@ -11,7 +11,7 @@ public partial class TelaPrincipalCL : ContentPage
 	public TelaPrincipalCL()
 	{
 		InitializeComponent();
-		CarregarDadosRestaurante();
+		//CarregarDadosRestaurante();
 	}
 
 
@@ -31,7 +31,7 @@ public partial class TelaPrincipalCL : ContentPage
             var restaurantes = await client.GetFromJsonAsync<List<Restaurante>>(api);
 
             restaurantesOriginais = restaurantes;
-            ListaRestaurantes.ItemsSource = restaurantes;
+            ListaRestaurantes.ItemsSource = restaurantesOriginais;
         }
         catch (Exception ex)
         {
@@ -41,7 +41,9 @@ public partial class TelaPrincipalCL : ContentPage
 
     private void VisualizarCardapio_Clicked(object sender, EventArgs e)
     {
-
+        var botao = (Button)sender;
+        var restaurante = (Restaurante)botao.BindingContext;
+        Navigation.PushAsync(new VisualizarCardapio(restaurante.Id));
     }
 
     private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
