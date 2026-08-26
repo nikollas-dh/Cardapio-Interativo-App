@@ -43,13 +43,13 @@ public partial class TelaPrincipalCL : ContentPage
     {
         var botao = (Button)sender;
         var restaurante = (Restaurante)botao.BindingContext;
-        Navigation.PushAsync(new VisualizarCardapio(restaurante.Id));
+        Application.Current.MainPage = (new VisualizarCardapio(restaurante.Id));
     }
 
     private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
-        var pesquisa = e.NewTextValue ?? "";
+        var pesquisa = e.NewTextValue.ToLower();
 
-        ListaRestaurantes.ItemsSource = restaurantesOriginais.Where(r=>r.Nome.Contains(pesquisa)).ToList();
+        ListaRestaurantes.ItemsSource = restaurantesOriginais.Where(r=>r.Nome.ToLower().Contains(pesquisa)).ToList();
     }
 }

@@ -10,6 +10,8 @@ public partial class TabbedPageClientePage : TabbedPage
         Children.Clear();
 
         Children.Add(new TelaPrincipalCL(usLogado));
+/*        Children.Add(new NavigationPage(new TelaPrincipalCL(usLogado)));
+*/
         Children.Add(new Ranking());
     }
 }

@@ -43,7 +43,7 @@ public partial class TelaPrincipalPR : ContentPage
 
     private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
     {
-        var pesquisa = e.NewTextValue ?? "";
+        var pesquisa = e.NewTextValue.ToLower() ?? "";
 
         ListaRestaurantes.ItemsSource = restaurantesOriginais
             .Where(r => r.Nome.Contains(pesquisa, StringComparison.OrdinalIgnoreCase))

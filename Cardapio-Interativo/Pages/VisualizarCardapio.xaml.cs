@@ -21,9 +21,14 @@ public partial class VisualizarCardapio : ContentPage
 
     private async void CarregarDados(int id)
     {
-        //var api = $"http://10.0.2.2:5123/api/cardapio/{id}";
-        //var res = await cl.GetFromJsonAsync<List<CardapioResponse>>(api);
+        var api = $"http://10.0.2.2:5123/api/cardapio/{id}";
+        var res = await cl.GetFromJsonAsync<List<CardapioResponse>>(api);
 
-        //listaCardapio.ItemsSource = res;
+        listaCardapio.ItemsSource = res;
+    }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+
     }
 }
