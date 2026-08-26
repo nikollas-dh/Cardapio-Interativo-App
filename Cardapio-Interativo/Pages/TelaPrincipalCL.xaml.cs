@@ -8,7 +8,7 @@ public partial class TelaPrincipalCL : ContentPage
 {
     private static readonly HttpClient client = new HttpClient();
     private List<Restaurante> restaurantesOriginais = new();
-	public TelaPrincipalCL()
+	public TelaPrincipalCL(Usuario? usLogado)
 	{
 		InitializeComponent();
 		//CarregarDadosRestaurante();

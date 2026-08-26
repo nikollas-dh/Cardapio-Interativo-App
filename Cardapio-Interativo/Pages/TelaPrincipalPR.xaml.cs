@@ -7,9 +7,11 @@ public partial class TelaPrincipalPR : ContentPage
 {
     private static readonly HttpClient client = new HttpClient();
     private List<Restaurante> restaurantesOriginais = new();
-    public TelaPrincipalPR()
+    Usuario us= new Usuario();
+    public TelaPrincipalPR(Usuario usLogado)
 	{
 		InitializeComponent();
+        us = usLogado;
 	}
     protected override void OnAppearing()
     {
@@ -19,20 +21,15 @@ public partial class TelaPrincipalPR : ContentPage
     }
     private async void CarregarDadosRestauranteProp()
     {
-        int id = 4;
+        int id = us.Id;
         try
         {
-            var api = $"http://192.168.15.4:5123/api/restaurante/{id}";
+            var api = $"http://10.0.2.2:5123/api/restaurante/{id}";
+            //var api = $"http://192.168.15.4:5123/api/restaurante/{id}";
             //var api = $"http://10.106.69.19:5123/api/restaurante/{id}";
             var restaurantes = await client.GetFromJsonAsync<List<Restaurante>>(api);
-            //ListaRestaurantes.ItemsSource = restaurantes;
+            ListaRestaurantes.ItemsSource = restaurantes;
 
-            if (restaurantes != null)
-            {
-                restaurantesOriginais = restaurantes;
-
-                ListaRestaurantes.ItemsSource = restaurantesOriginais;
-            }
         }
         catch (Exception ex)
         {
